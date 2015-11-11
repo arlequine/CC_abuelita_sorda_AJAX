@@ -1,0 +1,17 @@
+<h1>Abuelita Sordita</h1>
+ 
+<div id="grandma_response">
+    <% if @abuelita %>
+      <p>Tu Abuelita dice: "<span id="grandma_says"><%= @abuelita %></span>"</p>
+    <% end %>
+</div>
+
+  
+<% if @abuelita != "BYE" %>
+    <form action="/abuelita" method="post" id="grandma">
+      Dile algo a tu abuelita:
+      <br>
+      <input type="text" name="user_input" id="user">
+      <input type="submit" value="Dilo!" id="user_value">
+    </form>
+<%end%>
